@@ -1,0 +1,40 @@
+<html> 
+<head>
+<h1> Customer Information</h1>
+<script>
+function validateForm() 
+{
+  var a = document.forms["JSFV"]["firstname"].value;
+  var b = document.forms["JSFV"]["lastname"].value;
+  var c = document.forms["JSFV"]["email"].value;
+  if (a == "") {
+    alert("You must enter a first name");
+	}
+else if (b == "") {
+    alert("You must enter a last name");
+	}
+else if (c == "") {
+    alert("You must enter an email address");
+	}
+else {
+alert("Form has been validated")
+};
+  }
+</script>
+<link rel="stylesheet" href="Styling.css">
+</head>
+<body style="background-color:pink;">
+
+<form name="JSFV" action="/action_page.php" onsubmit="return validateForm()"  method="post" ;>  
+ First name:<br> 
+ <input type="text" name="firstname"><br> 
+  Last name:<br> 
+ <input type="text" name="lastname"><br> 
+ Email:<br> 
+  <input type="text" name="email"><br><br> 
+<input type="submit" value="Submit"> 
+
+</form>
+
+</body>
+</html>
